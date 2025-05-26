@@ -76,8 +76,8 @@ const CancelPage = () => {
         variants={paragraphVariants}
         className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-700 max-w-2xl"
       >
-        We are sorry to hear you've canceled your payment.  Do not worry, you can easily retry the process at any time.  We are here to help you get access to our amazing features whenever you're ready.
-      </motion.p>
+        We&apos;re sorry to hear you&apos;ve canceled your payment. Don&apos;t worry, you can easily retry the process at any time. We&apos;re here to help you get access to our amazing features whenever you&apos;re ready.
+       </motion.p>
       <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
         <button
           onClick={() => router.push("/pricing")}
