@@ -1,12 +1,12 @@
 import Stripe from "stripe";
 import { NextResponse } from "next/server";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2023-10-16",
-});
-
 export async function POST(req) {
   try {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: "2023-10-16",
+    });
+
     const body = await req.json();
     console.log("Received body:", body);
 
@@ -25,7 +25,6 @@ export async function POST(req) {
     });
 
     console.log("Session created:", session.id);
-
     return NextResponse.json({ url: session.url });
   } catch (err) {
     console.error("Stripe error:", err);
