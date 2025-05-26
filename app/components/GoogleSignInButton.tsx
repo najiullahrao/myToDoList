@@ -3,6 +3,7 @@ import { auth } from "../../lib/firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 const GoogleSignInButton = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const GoogleSignInButton = () => {
                        bg-white hover:bg-gray-100 text-gray-800 font-semibold
                        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 border-gray-300" // Changed border color
         >
-            <img
+            <Image 
                 src="https://www.google.com/favicon.ico"
                 alt="Google"
                 className="h-6 w-6"

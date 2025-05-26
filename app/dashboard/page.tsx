@@ -164,7 +164,7 @@ export default function Dashboard() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            handleAddTask();
+            handleAddTask(); 
           }}
           className="flex flex-wrap gap-4 items-center"
         >

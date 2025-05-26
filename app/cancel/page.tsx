@@ -76,7 +76,7 @@ const CancelPage = () => {
         variants={paragraphVariants}
         className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-700 max-w-2xl"
       >
-        We're sorry to hear you've canceled your payment.  Don't worry, you can easily retry the process at any time.  We're here to help you get access to our amazing features whenever you're ready.
+        We are sorry to hear you've canceled your payment.  Do not worry, you can easily retry the process at any time.  We are here to help you get access to our amazing features whenever you're ready.
       </motion.p>
       <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
         <button
