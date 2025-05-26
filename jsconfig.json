@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "baseUrl": ".",            // Required for `paths`
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
+
+
