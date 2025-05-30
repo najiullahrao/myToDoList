@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { auth, db } from "../../lib/firebase";
 import { doc, setDoc } from "firebase/firestore";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import GoogleSignInButton from "../components/GoogleSignInButton";
@@ -24,13 +24,16 @@ export default function Signup() {
       );
       const user = userCredential.user;
 
+      // Send verification email
+    await sendEmailVerification(user);
+
       // Create user doc with payment status
       await setDoc(doc(db, "users", user.uid), {
         email: user.email,
         hasPaid: false,
         createdAt: new Date(),
       });
-
+      alert("Verification email sent. Please check your inbox.");
       router.push("/pricing");
     } catch (error) {
       console.error(error);
